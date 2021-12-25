@@ -9,6 +9,6 @@ data Features = DirectDebits | SavingPot | StandingOrder | FastPayments
 
 class Account a where
   supportedFeatures :: a -> [Features]
-  getDirectDebits :: DirectDebit dd => a -> [dd]
-  getStandingOders :: StandingOrder so => a -> [so]
-  getSavingPots :: SavingPot sp => a -> [sp]
+  getDirectDebits :: DirectDebit dd => a -> IO [dd]
+  getStandingOders :: StandingOrder so => a -> IO [so]
+  getSavingPots :: SavingPot sp => a -> IO [sp]

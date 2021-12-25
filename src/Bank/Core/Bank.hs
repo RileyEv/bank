@@ -10,5 +10,5 @@ newtype HolderDetails = HolderDetails
   }
 
 class Bank b where
-  getAccounts :: Account a => b -> [a]
-  holderDetails :: b -> HolderDetails
+  getAccounts :: Account a => b -> IO [a]
+  holderDetails :: b -> IO HolderDetails
