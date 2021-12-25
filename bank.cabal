@@ -1,0 +1,34 @@
+cabal-version:      2.4
+name:               bank
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+homepage: https://github.com/RileyEv/bank
+bug-reports: https://github.com/RileyEv/bank/issues
+
+-- The license under which the package is released.
+license-file:        LICENSE
+author:              Riley Evans
+maintainer:          haskell@rly.rocks
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:
+        Bank.Core.Account
+      , Bank.Core.Bank
+      , Bank.Core.DirectDebit
+      , Bank.Core.SavingPot
+      , Bank.Core.StandingOrder
+    build-depends:
+        base >=4 && <5
+    hs-source-dirs:   src
+    default-language: Haskell2010
