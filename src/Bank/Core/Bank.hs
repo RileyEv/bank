@@ -2,9 +2,8 @@ module Bank.Core.Bank where
 
 import Bank.Core.Account (Account)
 
-newtype HolderDetails = HolderDetails
-  {
-    name        :: String
+data HolderDetails = HolderDetails
+  { name        :: String
   , address     :: String
   , dateOfBirth :: String
   }
