@@ -1,7 +1,6 @@
 module Bank.Core.Account where
 
-import           Bank.Core.Common    (AccountDetails, AccountIdentifiers,
-                                      Balance)
+import           Bank.Core.Common    (AccountDetails, AccountIdentifiers, Balance)
 import           Bank.Core.SavingPot (SavingPot)
 
 -- data Features = DirectDebits | SavingPot | StandingOrder | FastPayments
