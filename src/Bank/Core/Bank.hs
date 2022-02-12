@@ -1,13 +1,12 @@
 module Bank.Core.Bank where
 
-import Bank.Core.Account (Account)
+import           Bank.Core.Account (Account)
 
 data HolderDetails = HolderDetails
-  { name        :: String
-  , address     :: String
-  , dateOfBirth :: String
+  { name        :: String,
+    address     :: String,
+    dateOfBirth :: String
   }
 
 class Bank b where
-  getAccounts :: Account a => b -> IO [a]
-  holderDetails :: b -> IO HolderDetails
+  getAccounts :: b -> IO (Maybe [Account])

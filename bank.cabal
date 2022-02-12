@@ -23,12 +23,19 @@ extra-source-files: CHANGELOG.md
 
 library
     exposed-modules:
-        Bank.Core.Account
+        Bank.Core
+      , Bank.Core.Account
       , Bank.Core.Bank
+      , Bank.Core.Common
       , Bank.Core.DirectDebit
       , Bank.Core.SavingPot
       , Bank.Core.StandingOrder
     build-depends:
         base >=4 && <5
+      , aeson
     hs-source-dirs:   src
     default-language: Haskell2010
+    default-extensions:
+        DeriveGeneric
+      , DeriveAnyClass
+      , GADTs
